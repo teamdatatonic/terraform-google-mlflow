@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "prophet mlflow track"
+version = "0.1.0"
+description = "mlflow tracking for prophet model example"
+authors = ["kev-in047 <kevin.karobia@datatonic.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+mlflow = "^1.27.0"
+pandas = "^1.4.3"
+numpy = "^1.23.1"
+prophet = "^1.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,6 @@
+mlflow
+sqlalchemy
+google-cloud-storage
+psycopg2
+mysql
+pymysql
