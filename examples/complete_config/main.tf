@@ -1,6 +1,6 @@
-module "mlflow_service" {
+module "mlflow" {
   source  = "teamdatatonic/mlflow/google"
-  version = "1.0.0"
+  version = "1.0.1"
 
   project_id          = var.project_id
   region              = var.region
