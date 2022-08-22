@@ -33,7 +33,7 @@ You can go to the examples folder for module usage, the usage of the resource mo
 
 module "mlflow_service" {
   source  = "teamdatatonic/mlflow/google"
-  version = "1.0.0"
+  version = "1.0.1"
 
   project_id          = var.project_id
   region              = var.region
@@ -62,7 +62,23 @@ module "mlflow_service" {
 
 ## Providers
 
-No provider
+| Name | Version |
+|------|---------|
+| <a name="provider_random"></a> [random](#provider\_random) | 3.3.2 |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_mlflow"></a> [mlflow](#module\_mlflow) | ./modules/mlflow | n/a |
+| <a name="module_network"></a> [network](#module\_network) | ./modules/network | n/a |
+| <a name="module_services"></a> [services](#module\_services) | ./modules/services | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [random_id.artifacts_bucket_name_suffix](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id) | resource |
 
 ## Inputs
 | Name | Description | Type | Default | Required |
@@ -89,4 +105,4 @@ No provider
 |------|-------------|
 | lb\_ip | The load balancer's IP address that your domain / subdomain should point to |
 | oauth\_redirect\_url | The Oauthentication redirect url that you add to the you OAuth 2.0 Client ID's list of authorized urls |
-| created\_brand\_name | The brand name created by Terraform for you (if you didn't enter any brand name in the Inputs) |
+| brand\_name | The brand name created by Terraform for you (if you didn't enter any brand name in the Inputs) |
