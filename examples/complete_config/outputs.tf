@@ -1,5 +1,5 @@
 output "lb_ip" {
-  value = module.mlflow.load_balancer_ip
+  value = module.mlflow.lb_ip
 }
 
 output "oauth_redirect_url" {
@@ -7,5 +7,5 @@ output "oauth_redirect_url" {
 }
 
 output "brand_name" {
-  value = module.mlflow.created_brand_name
+  value = module.mlflow.brand_name
 }
