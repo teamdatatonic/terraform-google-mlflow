@@ -31,23 +31,21 @@ You can go to the examples folder for module usage, the usage of the resource mo
 
 ```hcl
 
-module "mlflow_service" {
-  source  = "teamdatatonic/mlflow/google"
-  version = "1.0.1"
+module "mlflow" {
+  source = "teamdatatonic/terraform-google-mlflow"
+  version = "1.0.0"
 
-  project_id          = var.project_id
-  region              = var.region
-  zone                = var.zone
-  mlflow_docker_image = var.mlflow_docker_image
-  network_name        = var.network_name
-  create_brand        = var.create_brand
-  brand_name          = var.brand_name
-  support_email       = var.support_email
-  oauth_client_id     = var.oauth_client_id
-  oauth_client_secret = var.oauth_client_secret
-  domain              = var.domain
-  webapp_users        = var.webapp_users
-  storage_uniform     = var.storage_uniform
+  project_id = "<project id>"
+  region = 'europe-west2'
+  zone = 'europe-west2-a'
+  mlflow_docker_image = 'europe-docker.pkg.dev/<project id>/mlflow:latest'
+  create_brand = 0
+  brand_name = '<org name>'
+  support_email = 'support@email.com'
+  oauth_client_id = 'oauth_client_id678.apps.googleusercontent.com'
+  oauth_client_secret = 'hex998080_oauth_client_secret'
+  domain = 'mlflow.domain.com'
+  webapp_users = 'user:dev1@email.com, user:dev2@email.com'
 }
 
 ```
