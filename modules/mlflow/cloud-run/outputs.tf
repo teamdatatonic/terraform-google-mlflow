@@ -1,3 +1,13 @@
+output "service_name" {
+  value = google_cloud_run_service.mlflow_service.name
+}
+
+output "service_location" {
+  value = google_cloud_run_service.mlflow_service.location
+}
+output "service_url" {
+  value = google_cloud_run_service.mlflow_service.status[0].url
+}
 output "load_balancer_ip" {
   value = module.lb-http.external_ip
 }
