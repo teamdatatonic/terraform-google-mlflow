@@ -13,3 +13,4 @@ export support_email=< support contact email>
 webapp_users='user:user1@example.com,user:user2@example.com,user:user3@example.com'
 export oauth_client_id=<oauth client id>
 export oauth_client_secret=<oauth client secret value>
+mlflow_experiment_name=<Name of mlflow experiment to do your tracking in>

@@ -87,8 +87,11 @@ if os.environ["domain"] == "":
 else:
     URI = "https://" + os.environ["domain"]
 
+if os.environ["mlflow_experiment_name"] == "":
+    EXP_NAME = input("Enter the mlflow experiment name: ")
+
 PROJECT_ID = os.environ["project_id"]
-EXP_NAME = input("Enter the mlflow experiment name: ")
+EXP_NAME = os.environ["mlflow_experiment_name"]
 
 os.environ["MLFLOW_TRACKING_TOKEN"] = load_token(URI)
 
