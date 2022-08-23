@@ -10,6 +10,16 @@ Deploys the necessary infrastructure required to successfully run a mlflow track
 | google | ~>  4.9.0 |
 | google-beta | ~>  4.9.0 |
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_artifacts"></a> [artifacts](#module\_artifacts) | ./artifacts | n/a |
+| <a name="module_cloud_run"></a> [cloud\_run](#module\_cloud\_run) | ./cloud-run | n/a |
+| <a name="module_database"></a> [database](#module\_database) | ./database | n/a |
+| <a name="module_db_secret"></a> [db\_secret](#module\_db\_secret) | ./secret_manager | n/a |
+| <a name="module_logger"></a> [logger](#module\_logger) | ./logger | n/a |
+
 ## Providers
 
 No provider
