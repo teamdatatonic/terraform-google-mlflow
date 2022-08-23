@@ -33,7 +33,7 @@ You can go to the examples folder for module usage, the usage of the resource mo
 
 module "mlflow" {
   source = "teamdatatonic/terraform-google-mlflow"
-  version = "1.0.0"
+  version = "1.1.0"
 
   project_id = "<project id>"
   region = 'europe-west2'
