@@ -1,16 +1,16 @@
 set -a
 
-export project_id=<gcp project name>
-export region=<gcp region>
-export zone=< gcp zone>
-export db_name=<database name>
-export db_version=<database version>
-export db_tier=<database tier>
-export mlflow_docker_image=<europe-docker.pkg.dev/<project_id>/mlflow:latest>
-export brand_name= <gcp brand>
-export domain=< domain > # don't add the https:// or http:// to domain
-export support_email=< support contact email>
+export project_id='mlflow-gcp'
+export region='europe-west2'
+export zone='europe-west2b'
+export db_name='mlflow-postgresql'
+export db_version='POSTGRES_13'
+export db_tier=db-f1-micro
+export mlflow_docker_image=<europe-docker.pkg.dev/mlflow-gcp/mlflow:latest>
+export brand_name=straw_hats
+export domain=mlflow.strawhats.com # don't add the https:// or http:// to domain
+export support_email=support@email.com
 webapp_users='user:user1@example.com,user:user2@example.com,user:user3@example.com'
-export oauth_client_id=<oauth client id>
-export oauth_client_secret=<oauth client secret value>
-mlflow_experiment_name=<Name of mlflow experiment to do your tracking in>
+export oauth_client_id=977178309684-7gcg621ahtq39p03mh55q65p88906.apps.googleusercontent.com
+export oauth_client_secret=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
+mlflow_experiment_name=tensorflow_model

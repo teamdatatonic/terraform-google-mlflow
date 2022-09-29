@@ -35,14 +35,14 @@ module "mlflow" {
   source = "teamdatatonic/mlflow/google"
   version = "1.2.0"
 
-  project_id = "<project id>"
+  project_id = "mlflow-gcp"
   region = 'europe-west2'
   zone = 'europe-west2-a'
-  mlflow_docker_image = 'europe-docker.pkg.dev/<project id>/mlflow:latest'
-  brand_name = '<org name>'
+  mlflow_docker_image = 'europe-docker.pkg.dev/mlflow-gcp/mlflow:latest'
+  brand_name = 'straw_hats'
   support_email = 'support@email.com'
-  oauth_client_id = 'oauth_client_id678.apps.googleusercontent.com'
-  oauth_client_secret = 'hex998080_oauth_client_secret'
+  oauth_client_id = '977178309684-7gcg621ahtq39p03mh55q65p88906.apps.googleusercontent.com'
+  oauth_client_secret = 'MOKLPX-C-QuBFCAmgUtYkXTSzQQBzU7YHXq'
   domain = 'mlflow.domain.com'
   webapp_users = 'user:dev1@email.com, user:dev2@email.com'
 }
