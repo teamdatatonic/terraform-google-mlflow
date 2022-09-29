@@ -46,7 +46,6 @@ module "cloud_run" {
   db_private_ip       = module.database.private_ip
   gcs_backend         = module.artifacts.url
   network_short_name  = var.network_short_name
-  create_brand        = var.create_brand
   brand_name          = var.brand_name
   support_email       = var.support_email
   domain              = var.domain

@@ -81,19 +81,6 @@ resource "google_cloud_run_service" "mlflow_service" {
 
 }
 
-resource "google_iap_brand" "project_brand" {
-  count             = var.create_brand == 1 ? 1 : 0
-  support_email     = var.support_email
-  application_title = "mlflow"
-  project           = data.google_project.project.number
-}
-
-resource "google_iap_client" "project_client" {
-  count        = var.oauth_client_id == "" ? 1 : 0
-  display_name = "mlflow"
-  brand        = var.create_brand == 1 ? google_iap_brand.project_brand[0].name : var.brand_name
-}
-
 resource "google_compute_region_network_endpoint_group" "serverless_neg" {
   provider              = google
   name                  = "mlflow-serverless-neg"
@@ -131,8 +118,8 @@ module "lb-http" {
 
       iap_config = {
         enable               = true
-        oauth2_client_id     = var.oauth_client_id == "" ? google_iap_client.project_client[0].id : var.oauth_client_id
-        oauth2_client_secret = var.oauth_client_secret == "" ? google_iap_client.project_client[0].secret : var.oauth_client_secret
+        oauth2_client_id     = var.oauth_client_id
+        oauth2_client_secret = var.oauth_client_secret
       }
       log_config = {
         enable      = true

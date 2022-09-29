@@ -41,7 +41,6 @@ module "mlflow" {
   zone                  = var.zone
   network_self_link     = module.network.network_self_link
   network_short_name    = module.network.network_short_name
-  create_brand          = var.create_brand
   brand_name            = var.brand_name
   support_email         = var.support_email
   oauth_client_id       = var.oauth_client_id

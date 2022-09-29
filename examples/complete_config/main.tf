@@ -7,7 +7,6 @@ module "mlflow" {
   zone                = var.zone
   mlflow_docker_image = var.mlflow_docker_image
   network_name        = var.network_name
-  create_brand        = var.create_brand
   brand_name          = var.brand_name
   support_email       = var.support_email
   oauth_client_id     = var.oauth_client_id
