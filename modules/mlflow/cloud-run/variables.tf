@@ -53,13 +53,8 @@ variable "network_short_name" {
   type = string
 }
 
-variable "create_brand" {
-  description = "1 if the brand needs to be created, 0 otherwise"
-  type        = number
-}
-
 variable "brand_name" {
-  description = "The name of the brand if it exists"
+  description = "The name of the brand"
   type        = string
 }
 variable "support_email" {

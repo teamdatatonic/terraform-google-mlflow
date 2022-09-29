@@ -34,13 +34,8 @@ variable "storage_uniform" {
   type        = string
 }
 
-variable "create_brand" {
-  description = "1 if the brand needs to be created, 0 otherwise"
-  type        = number
-}
-
 variable "brand_name" {
-  description = "The name of the brand if it exists (Leave blank if you entered 1 for the create_brand variable)"
+  description = "The name of the brand"
   type        = string
 }
 variable "support_email" {
