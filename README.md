@@ -32,14 +32,13 @@ You can go to the examples folder for module usage, the usage of the resource mo
 ```hcl
 
 module "mlflow" {
-  source = "teamdatatonic/terraform-google-mlflow"
-  version = "1.1.0"
+  source = "teamdatatonic/mlflow/google"
+  version = "1.2.0"
 
   project_id = "<project id>"
   region = 'europe-west2'
   zone = 'europe-west2-a'
   mlflow_docker_image = 'europe-docker.pkg.dev/<project id>/mlflow:latest'
-  create_brand = 0
   brand_name = '<org name>'
   support_email = 'support@email.com'
   oauth_client_id = 'oauth_client_id678.apps.googleusercontent.com'
@@ -87,7 +86,6 @@ module "mlflow" {
 | mlflow\_docker\_image | Name of the docker image containing the mlflow server. | `string` | n/a | yes |
 | network\_name | if you have a prefered network to use enter it if not leave it empty one will be created for you. | `string` | n/a | no |
 | storage\_uniform | Uniform access level to be activated for the buckets | `string` | n/a | no |
-| create\_brand | Creates a brand for Oauth the consent screen, 1 if the brand needs to be created, 0 otherwise | `number` | n/a | yes |
 | brand\_name | if the create_band input is 0 (if it exists) enter the name of the brand | `string` | n/a | no |
 | support\_email | Person or group to contact in case of problems | `string`| n/a | yes |
 | oauth\_client\_id | if the create_band input is 0 (if it exists) enter the name of the Oauth Client Id | `string` | n/a | no |

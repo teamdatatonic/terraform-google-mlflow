@@ -28,6 +28,7 @@ eval "$(direnv hook bash)"
 # zsh users - add the following line to your ~/.zshrc
 eval "$(direnv hook zsh)"
 ```
+* [Create OAuth2.0 credentials](https://support.google.com/cloud/answer/6158849?hl=en#zippy=)
 * Copy `.envrc.sample` to `.envrc` and update the the environment variables in `.envrc` to your values.
 
 > **Things to note**
@@ -36,7 +37,7 @@ eval "$(direnv hook zsh)"
 >
 > To add web app users, you have to specify if the account being added is a user or a service account i.e "user:user_email_address,serviceAccount:service_account_email_address"
 >
-> Only include the brand_name, oauth_client_id, oauth_client_secret variables (in the .envrc file) if you have [OAuth 2,0](https://developers.google.com/identity/protocols/oauth2) already configured. If you don't have it configured one will set be up for you, once you deploy the platform you will be prompted for a create_brand variable enter '1' and the oauth credentials will be created for you.
+> Only include the brand_name, oauth_client_id, oauth_client_secret variables (in the .envrc file) if you have [OAuth 2,0](https://developers.google.com/identity/protocols/oauth2) already configured.
 
 * Load the env variables in `.envrc` by running `direnv allow .`
 
@@ -46,7 +47,7 @@ To deploy the platform run `make deploy-mlflow` and wait for the create brand pr
 
 The deployment should take around 20 minutes.
 
-After it's complete you will get the name of the created brand / entered brand, an IP address `lb_ip` and a url `oauth2_redirect_uri` as the output.
+After it's complete you will get the name of the entered brand, an IP address `lb_ip` and a url `oauth2_redirect_uri` as the output.
 
 #### Other make commands
 
@@ -108,7 +109,6 @@ No provider
 | mlflow\_docker\_image | Name of the docker image containing the mlflow server. | `string` | n/a | yes |
 | network\_name | if you have a prefered network to use enter it if not leave it empty one will be created for you. | `string` | n/a | no |
 | storage\_uniform | Uniform access level to be activated for the buckets | `string` | n/a | no |
-| create\_brand | Creates a brand for Oauth the consent screen, 1 if the brand needs to be created, 0 otherwise | `number` | n/a | yes |
 | brand\_name | if the create_band input is 0 (if it exists) enter the name of the brand | `string` | n/a | no |
 | support\_email | Person or group to contact in case of problems | `string`| n/a | yes |
 | oauth\_client\_id | if the create_band input is 0 (if it exists) enter the name of the Oauth Client Id | `string` | n/a | no |

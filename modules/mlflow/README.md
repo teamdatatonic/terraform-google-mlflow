@@ -45,7 +45,6 @@ No provider
 | db\_password\_secret\_name | The secret name of the password for the database created. | `string` | `"mlflow-db-pwd"` | no |
 | network\_self\_link | The self link of the network to use for the database instance. | `string` | n/a | yes |
 | network\_short\_name | The short name of the network to use for the database instance. | `string` | n/a | yes |
-| create\_brand | Creates a brand for Oauth the consent screen, 1 if the brand needs to be created, 0 otherwise | `number` | n/a | yes |
 | brand\_name | if the create_band input is 0 (if it exists) enter the name of the brand | `string` | n/a | no |
 | support\_email | Person or group to contact in case of problems | `string`| n/a | yes |
 | oauth\_client\_id | if the create_band input is 0 (if it exists) enter the name of the Oauth Client Id | `string` | n/a | no |

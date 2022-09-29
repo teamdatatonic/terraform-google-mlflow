@@ -28,7 +28,6 @@ No provider
 | gcs\_backend | The GCS bucket used for arifacts storage | `string` | n/a | yes |
 | module\_depends\_on | The dependecies of the cloud-run module | `any` | null | no |
 | network\_short\_name | The name of the network where the database instance is connected. | `string` | n/a | yes |
-| create\_brand | Creates a brand for Oauth the consent screen, 1 if the brand needs to be created, 0 otherwise | `number` | n/a | yes |
 | brand\_name | if the create_band input is 0 (if it exists) enter the name of the brand | `string` | n/a | no |
 | support\_email | Person or group to contact in case of problems | `string`| n/a | yes |
 | oauth\_client\_id | if the create_band input is 0 (if it exists) enter the name of the Oauth Client Id | `string` | n/a | no |
